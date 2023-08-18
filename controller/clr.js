@@ -26,15 +26,9 @@ const contact = db.contact_forms;
 
     }
   
-// get delete
-const deletedata = async (req, resp) => {
-    let id = req.params.id
-    await contact_forms.destroy({ where: { id: id } })
-    resp.status(200).send("product is deleted")
-}
+
 module.exports= {
     addcontact,
-    deletedata
 }
         
 

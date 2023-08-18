@@ -9,6 +9,6 @@ routes.use(bodyParser.json());
 
 
 routes.post('/addcontact', controller.addcontact);
-routes.delete('/deleteUser/:id', controller.deletedata);
+
 
 module.exports = routes
