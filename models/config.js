@@ -6,7 +6,7 @@ const sequelize = new Sequelize('abhis', 'root', '9899803387Ak@',{
 })
 
 sequelize.authenticate().then(() => {
-    console.log('connected')
+    console.log('Connected')
 })
     .catch(err => {
         console.log("error" + err)

@@ -1,4 +1,4 @@
-const db = require ('../models/Dbconnections')
+const db = require ('../models/config')
 const { validateContact, handleValidationErrors } = require('../Validation/contactValidation');
 
 //create a main function 
