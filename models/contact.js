@@ -2,12 +2,12 @@
 module.exports=(Sequelize, DataTypes) => {
 
 const Contact = Sequelize.define('Contact', {
-    First:{
+    FirstName:{
         type: DataTypes.STRING,
         allowNull: false,
 
     },
-    Last:{
+    LastName:{
         type:DataTypes.STRING,
         allowNull: false,
     },

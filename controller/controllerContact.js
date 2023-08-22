@@ -1,35 +1,34 @@
-const db = require ('../models/Dbconnectons')
+const db = require ('../models/Dbconnections')
 const { validateContact, handleValidationErrors } = require('../Validation/contactValidation');
 
 //create a main function 
 
-const Contact = db.contactForms;
+const Contact = db.ContactForms;
  //  Main work is started 
 
-  const addcontact = async (req, resp) => {
+  const addContact = async (req, resp) => {
     try {
         let info = {
-            First: req.body.First,
-            Last: req.body.Last,
+            FirstName: req.body.FirstName,
+            LastName: req.body.LastName,
             Email: req.body.Email,
             Phone: req.body.Phone,
             Describe: req.body.Describe,
             Message: req.body.Message,
             
         }
-        const contact_forms = await Contact.create(info)
-        resp.status(200).send(contact_forms)
+        const contactForms = await Contact.create(info)
+        resp.status(200).send(contactForms)
     }
     catch (err) {
         console.log("err", err)
     }
 
-
     }
-    const getAllConnection = async (req, resp) => {
+    const getAllConnections = async (req, resp) => {
         try {
-            const allConnections = await Contact.findAll();
-            resp.status(200).send({ allConnections })
+            const contactForms = await Contact.findAll();
+            resp.status(200).send({contactForms})
         }
         catch (err) {
             console.log('err', err)
@@ -37,8 +36,8 @@ const Contact = db.contactForms;
     }
     
 module.exports= {
-    addcontact,
-    getAllConnection
+    addContact,
+    getAllConnections
 }
         
 

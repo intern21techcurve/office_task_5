@@ -14,7 +14,7 @@ sequelize.authenticate().then(() => {
 const db = {}
 db.sequelize = sequelize
 db.sequelize = sequelize
-db.contactForms = require('./contact.js')(sequelize, DataTypes)
+db.ContactForms = require('./Contact.js')(sequelize, DataTypes)
 db.sequelize.sync({ force: false })
     .then(() => {
         console.log('Sync is done')

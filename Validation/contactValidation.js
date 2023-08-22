@@ -1,7 +1,7 @@
 const { body, validationResult } = require('express-validator');
 const validateContact = [
-    body('First').notEmpty().withMessage('First name is required'),
-    body('Last').notEmpty().withMessage('Last name is required'),
+    body('FirstName').notEmpty().withMessage('First name is required'),
+    body('LastName').notEmpty().withMessage('Last name is required'),
     body('Email').isEmail().withMessage('Invalid email'),
     body('Phone').notEmpty().withMessage('Phone number is required'),
     body('Describe').notEmpty().withMessage('Description is required'),

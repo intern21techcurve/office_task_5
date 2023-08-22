@@ -8,8 +8,8 @@ Routes.use(bodyParser.urlencoded({ extended: true }));
 Routes.use(bodyParser.json());
 
 
-Routes.post('/addcontact', controllerContact.addcontact);
-Routes.get('/getallconnections',controllerContact.getAllConnection )
+Routes.post('/addcontact', controllerContact.addContact);
+Routes.get('/getAllConnections',controllerContact.getAllConnections )
 
 
 
