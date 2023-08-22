@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 const port = 9000;
 
-const route = require('./routes/routes');
-const routes = require('./routes/routes');
+
+const routes = require('./routes/contactRoutes');
 
 app.use('/api', routes)
 

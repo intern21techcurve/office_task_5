@@ -1,7 +1,7 @@
 
 module.exports=(Sequelize, DataTypes) => {
 
-const contact = Sequelize.define('contact', {
+const Contact = Sequelize.define('Contact', {
     First:{
         type: DataTypes.STRING,
         allowNull: false,
@@ -21,21 +21,14 @@ const contact = Sequelize.define('contact', {
 
     },
     // best decribe u 
-    describe:{
+    Describe:{
         type: DataTypes.STRING,
         allowNull: false
     },
     Message:{
         type:DataTypes.TEXT,
         allowNull: false
-    },
-    checkbox:{
-        type:DataTypes.BOOLEAN,
-        allowNull: false
-
     }
-    
-    
 })
-return contact
+return Contact
 }
