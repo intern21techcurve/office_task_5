@@ -5,7 +5,7 @@ const port = 9000;
 
 const routes = require('./routes/contactRoutes');
 
-app.use('/api', routes)
+app.use("/api",routes );
 
 app.get( '/',(req,resp) =>{
     resp.status(200).send(
