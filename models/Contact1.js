@@ -109,6 +109,6 @@ Contact.createConnection = async (userData) => {
   }
 
 };
-Contact.sync({ force: true }); 
+Contact.sync(); 
 
 module.exports = Contact;
